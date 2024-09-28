@@ -1184,7 +1184,7 @@ footer.footer .footer-bottom .footer-social .social-links a:last-child .name {
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 1216px;
+  max-width: 1400px;
   overflow-wrap: anywhere;
 }
 .feature-headline .feature-content .text {
@@ -1199,7 +1199,7 @@ footer.footer .footer-bottom .footer-social .social-links a:last-child .name {
   font-weight: 700;
 }
 .feature-headline .feature-content .text .description {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 300;
   line-height: 1.5;
   color: #D5D5D5;

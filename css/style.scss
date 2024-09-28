@@ -511,7 +511,6 @@ header.header {
   width: auto;
   padding: 0 30px;
   border-radius: 8px;
-  border-style: solid;
   border-width: 1px;
   border-color: #FFFFFF;
   font-size: 18px;
@@ -527,9 +526,6 @@ header.header {
 
   &.secondary {
     border-color: transparent;
-    font-weight: 200;
-    color: #D5D5D5;
-
   }
 }
 

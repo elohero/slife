@@ -122,10 +122,6 @@ body {
 .wrapper {
   height: 100vh;
   overflow: auto;
-
-  &.y-scroll-snap {
-    scroll-snap-type: y mandatory;
-  }
 }
 
 header.header {
@@ -398,16 +394,16 @@ header.header {
 
 .hero {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
   background-image: url('../files/background-header.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
-  padding: 0 98px 0 82px;
+  padding: 40px 90px;
   scroll-snap-align: center;
-  height: 100vh;
+  min-height: 100vh;
 
   .hero-content {
     display: flex;
@@ -417,7 +413,6 @@ header.header {
     gap: 32px;
     width: auto;
     max-width: 588px;
-    height: 100%;
     padding: 147px 0 54px 0;
 
     .hero-title {
@@ -467,7 +462,6 @@ header.header {
   }
 
   @include device("mobile", "tablet") {
-    height: calc(100vh - 70px);
     padding-left: $horizontal-indent-tablet;
     padding-right: $horizontal-indent-tablet;
   }
@@ -477,9 +471,6 @@ header.header {
 
     .hero-content {
       padding: 140px 0 50px 0;
-
-      .hero-title {
-      }
 
       .hero-text {
         font-size: 18px;
@@ -512,7 +503,6 @@ header.header {
   padding: 0 30px;
   border-radius: 8px;
   border-width: 1px;
-  border-color: #FFFFFF;
   font-size: 18px;
   font-weight: 500;
   line-height: 1.33;
@@ -677,37 +667,6 @@ header.header {
       padding-top: 40px;
       padding-left: $horizontal-indent-mob;
       padding-right: $horizontal-indent-mob;
-    }
-  }
-  @include device("mobile", "small-tablet", "tablet") {
-    .wrapper {
-      &.y-scroll-snap {
-        scroll-snap-type: unset;
-      }
-    }
-    .hero {
-      scroll-snap-align: unset;
-    }
-    .footer {
-      scroll-snap-align: unset;
-    }
-    .content-switcher {
-      scroll-snap-align: unset;
-    }
-    .directions {
-      scroll-snap-align: unset;
-    }
-    .grid-section {
-      scroll-snap-align: unset;
-    }
-    .feature-headline {
-      scroll-snap-align: unset;
-    }
-    .cards-container {
-      scroll-snap-align: unset;
-    }
-    .hero news {
-      scroll-snap-align: unset;
     }
   }
 }
@@ -1083,7 +1042,7 @@ footer.footer {
     }
   }
 
-  @include device("mobile", "tablet") {
+  @include device("mobile") {
     .footer-top {
       .footer-top-wrapper {
         flex-direction: column;
@@ -1105,6 +1064,16 @@ footer.footer {
       }
     }
   }
+  @include device("tablet") {
+    .footer-logo {
+      display: none;
+    }
+    .footer-bottom {
+      flex-wrap: unset;
+    }
+  }
+
+
   @include device("mobile") {
     .footer-top {
       padding: 136px $horizontal-indent-mob;
@@ -1149,7 +1118,7 @@ footer.footer {
 
   .section-wrapper {
     width: 100%;
-    max-width: 1216px;
+    max-width: 900px;
   }
 
   .heading {
@@ -1177,7 +1146,7 @@ footer.footer {
 
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
     gap: 32px;
     margin: 26px 0 0 0;
@@ -1291,7 +1260,6 @@ footer.footer {
   align-items: center;
   padding: 126px 80px 40px 80px;
   scroll-snap-align: center;
-  height: 100vh;
 
   .feature-content {
     display: flex;
@@ -1394,3 +1362,11 @@ footer.footer {
 .card-photo {
   margin-right: 10px;
 }
+
+@include device("large-tablet") {
+  .side-image {
+    width: 500px;
+    height: auto;
+  }
+}
+

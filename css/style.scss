@@ -1370,8 +1370,6 @@ footer.footer {
 
 @include device("large-tablet") {
   .side-image {
-    width: 500px;
-    height: auto;
+    display: none;
   }
 }
-

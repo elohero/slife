@@ -1185,8 +1185,7 @@ footer.footer .footer-bottom .footer-social .social-links a:last-child .name {
 
 @media (min-width: 800px) and (max-width: 1259.98px) {
   .side-image {
-    width: 500px;
-    height: auto;
+    display: none;
   }
 }
 

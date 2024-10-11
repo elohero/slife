@@ -95,8 +95,7 @@ header.header .top-bar .logo {
   justify-content: flex-start;
   height: 100%;
   width: auto;
-  padding: 10px 0;
-  padding-left: 4px;
+  padding: 10px 0 0 4px;
 }
 header.header .top-bar .logo img {
   width: auto;
@@ -1165,6 +1164,7 @@ footer.footer .footer-bottom .footer-social .social-links a:last-child .name {
   text-align: center;
   border-radius: 15px;
   color: black;
+  overflow: hidden;
 }
 .cards-container .card h1, .cards-container .card h2, .cards-container .card p, .cards-container .card .bottom-card {
   padding: 0 20px 0 20px;

@@ -1,4 +1,4 @@
-// Custom Device-Oriented Screensize Mixins ----------------------------------
+// Custom Device-Oriented Screen size Mixins ----------------------------------
 $screen-xsmall-end: 479.98px; // ...mobile ; ...narrow
 $screen-small-start: 480px; // small-tablet... , tablet... ; medium..., medium-wide...
 $screen-small-end: 551.98px;
@@ -156,8 +156,8 @@ header.header {
       justify-content: flex-start;
       height: 100%;
       width: auto;
-      padding: 10px 0;
-      padding-left: 4px;
+      padding: 10px 0 0 4px;
+
 
       img {
         width: auto;
@@ -1349,6 +1349,7 @@ footer.footer {
     text-align: center;
     border-radius: 15px;
     color: black;
+    overflow: hidden;
     h1, h2, p, .bottom-card {
       padding: 0 20px 0 20px;
     }

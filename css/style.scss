@@ -124,7 +124,6 @@ body {
   input, button {
     outline: none;
   }
-
 }
 
 .wrapper {
@@ -1345,7 +1344,7 @@ footer.footer {
 
   .card {
     width: 370px;
-    height: 520px;
+    height: 525px;
     background-color: white;
     text-align: center;
     border-radius: 15px;
@@ -1447,5 +1446,10 @@ footer.footer {
     column-gap: 80px;
     margin-top: 50px;
   }
+}
 
+@media (min-width: 560px) and (max-width: 1070px) {
+  .contact-map {
+    display: none;
+  }
 }

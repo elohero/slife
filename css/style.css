@@ -1160,7 +1160,7 @@ footer.footer .footer-bottom .footer-social .social-links a:last-child .name {
 }
 .cards-container .card {
   width: 370px;
-  height: 520px;
+  height: 525px;
   background-color: white;
   text-align: center;
   border-radius: 15px;
@@ -1252,6 +1252,12 @@ footer.footer .footer-bottom .footer-social .social-links a:last-child .name {
   align-items: center;
   column-gap: 80px;
   margin-top: 50px;
+}
+
+@media (min-width: 560px) and (max-width: 1070px) {
+  .contact-map {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

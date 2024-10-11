@@ -413,6 +413,11 @@ header.header {
   scroll-snap-align: center;
   min-height: 100vh;
 
+  &.contact-news {
+    justify-content: center;
+    align-items: center;
+  }
+
   .hero-content {
     display: flex;
     flex-direction: column;

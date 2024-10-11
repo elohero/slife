@@ -9,6 +9,7 @@ $screen-large-mid: 1024px;
 $screen-large-end: 1259.98px; // ...large-tablet, ...tablet
 $screen-xlarge-start: 1260px; // desktop...
 
+
 @mixin device($devices...) {
   @each $device in $devices {
     @if $device=="mobile" {
@@ -48,6 +49,7 @@ $horizontal-indent-mob: 30px;
 
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 html {
   /*  Custom scrollbar for WebKit browsers (Chrome, Safari, etc.) */
@@ -72,6 +74,10 @@ html {
   scrollbar-color: #292929 #1C1C1C; /* thumb color and track color */
 }
 
+body::after {
+  position: absolute;
+  left: -1000000;
+}
 
 body {
   margin: 0;
@@ -1372,4 +1378,55 @@ footer.footer {
   .side-image {
     display: none;
   }
+}
+
+.contact {
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    column-gap: 45px;
+    margin-top: 80px;
+    overflow: hidden;
+  }
+
+  &-info {
+    height: 100%;
+    padding: 36px 70px;
+    font-family: "Poppins", sans-serif;
+
+    & > p {
+      margin-bottom: 50px;
+    }
+
+    ul {
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      row-gap: 50px;
+
+      li, li > a {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        column-gap: 20px;
+      }
+    }
+  }
+
+  &-map {
+    height: 500px;
+  }
+
+  &-social-links {
+    display: flex;
+    align-items: center;
+    column-gap: 80px;
+    margin-top: 50px;
+  }
+
 }

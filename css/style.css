@@ -310,7 +310,7 @@ header.header.collapsed .top-bar {
   scroll-snap-align: center;
   min-height: 100vh;
 }
-.hero.news {
+.hero.contact-news {
   justify-content: center;
   align-items: center;
 }

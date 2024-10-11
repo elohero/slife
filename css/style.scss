@@ -332,8 +332,6 @@ header.header {
             }
 
             &.active {
-              font-weight: 700;
-
               &:before {
                 transform: scaleX(1);
               }
@@ -1335,12 +1333,6 @@ footer.footer {
   @include device("mobile") {
     padding: 20px $horizontal-indent-mob;
   }
-
-}
-
-
-.sort {
-  border-top: 1px solid white;
 }
 
 .cards-container {
@@ -1350,33 +1342,55 @@ footer.footer {
   justify-content: center;
   padding-bottom: 20px;
   scroll-snap-align: center;
-}
 
-.card {
-  flex: 0 1 calc(30% - 20px);
-  background-color: white;
-  padding: 20px;
-  text-align: center;
-  border-radius: 8px;
-  color: black;
-}
-
-.card-top {
-  width: 100%;
+  .card {
+    width: 370px;
+    height: 520px;
+    background-color: white;
+    text-align: center;
+    border-radius: 15px;
+    color: black;
+    h1, h2, p, .bottom-card {
+      padding: 0 20px 0 20px;
+    }
+    h1 {
+      font-size: 12px;
+      letter-spacing: 0;
+      text-align: start;
+    }
+    h2 {
+      margin: 9px 0 9px 0;
+      text-align: start;
+      font-size: 18px;
+      font-weight: normal;
+    }
+    p {
+      text-align: start;
+      font-weight: 300;
+      margin: 0 0 20px 0;
+    }
+    &-top {
+      width: 100%;
+      padding: 0;
+    }
+    .bottom-card {
+      display: flex;
+      justify-content: left;
+      text-align: left;
+      .card-photo {
+        margin-right: 10px;
+        width: 42px;
+        height: 42px;
+      }
+      &-name {
+        padding: 0;
+      }
+    }
+  }
 }
 
 .card:nth-child(4), .card:nth-child(5), .card:nth-child(6) {
   margin-top: 20px;
-}
-
-.bottom-card {
-  display: flex;
-  justify-content: left;
-  text-align: left;
-}
-
-.card-photo {
-  margin-right: 10px;
 }
 
 @include device("large-tablet") {

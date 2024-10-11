@@ -241,9 +241,6 @@ header.header .bottom-bar .nav-bar .nav-links li a:before {
 header.header .bottom-bar .nav-bar .nav-links li a:hover:before {
   transform: scaleX(1);
 }
-header.header .bottom-bar .nav-bar .nav-links li a.active {
-  font-weight: 700;
-}
 header.header .bottom-bar .nav-bar .nav-links li a.active:before {
   transform: scaleX(1);
 }
@@ -1153,10 +1150,6 @@ footer.footer .footer-bottom .footer-social .social-links a:last-child .name {
   }
 }
 
-.sort {
-  border-top: 1px solid white;
-}
-
 .cards-container {
   display: flex;
   flex-wrap: wrap;
@@ -1165,32 +1158,53 @@ footer.footer .footer-bottom .footer-social .social-links a:last-child .name {
   padding-bottom: 20px;
   scroll-snap-align: center;
 }
-
-.card {
-  flex: 0 1 calc(30% - 20px);
+.cards-container .card {
+  width: 370px;
+  height: 520px;
   background-color: white;
-  padding: 20px;
   text-align: center;
-  border-radius: 8px;
+  border-radius: 15px;
   color: black;
 }
-
-.card-top {
+.cards-container .card h1, .cards-container .card h2, .cards-container .card p, .cards-container .card .bottom-card {
+  padding: 0 20px 0 20px;
+}
+.cards-container .card h1 {
+  font-size: 12px;
+  letter-spacing: 0;
+  text-align: start;
+}
+.cards-container .card h2 {
+  margin: 9px 0 9px 0;
+  text-align: start;
+  font-size: 18px;
+  font-weight: normal;
+}
+.cards-container .card p {
+  text-align: start;
+  font-weight: 300;
+  margin: 0 0 20px 0;
+}
+.cards-container .card-top {
   width: 100%;
+  padding: 0;
 }
-
-.card:nth-child(4), .card:nth-child(5), .card:nth-child(6) {
-  margin-top: 20px;
-}
-
-.bottom-card {
+.cards-container .card .bottom-card {
   display: flex;
   justify-content: left;
   text-align: left;
 }
-
-.card-photo {
+.cards-container .card .bottom-card .card-photo {
   margin-right: 10px;
+  width: 42px;
+  height: 42px;
+}
+.cards-container .card .bottom-card-name {
+  padding: 0;
+}
+
+.card:nth-child(4), .card:nth-child(5), .card:nth-child(6) {
+  margin-top: 20px;
 }
 
 @media (min-width: 800px) and (max-width: 1259.98px) {
